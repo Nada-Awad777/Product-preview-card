@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+/* font-family: "Fraunces", system-ui;
+font-family: "Monserrat", sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--Cream);
+    font-family: "Monserrat", sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.grid {
+    max-width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--White);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.img img {
+    width: 100%;
+}
+
+.card-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h6 {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--Dark-grayish-blue);
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 34px;
+    line-height: 1em;
+    font-family: "Fraunces", system-ui;
+    color: var(--Very-dark-blue);
+}
+
+p {
+    color: var(--Dark-grayish-blue);
+    line-height: 1.6em;
+    margin-bottom: 20px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.price .price-one {
+    color: var(--Dark-cyan);
+    font-size: 25px;
+    font-family: "Fraunces", system-ui;
+}
+
+.price .price-two {
+    padding-left: 25px;
+    text-decoration: line-through;
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    width: 100%;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    scale: 1.1;
+}
+
+button img {
+    padding-right: 7px;
+}
+
+@media only screen and (max-width: 628px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .img img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+}
